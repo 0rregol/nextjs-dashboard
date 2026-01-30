@@ -26,8 +26,6 @@ export function UpdateInvoice({ id }: { id: string }) {
 }
 
 export function DeleteInvoice({ id }: { id: string }) {
-
-  
   return (
     <form
       action={async () => {
