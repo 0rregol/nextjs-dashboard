@@ -5,11 +5,14 @@ import { lusitana } from '@/app/ui/fonts';
 import { fetchLatestInvoices } from '@/app/lib/data'; 
 import { Suspense } from 'react';
 import { RevenueChartSkeleton, CardsSkeleton } from '@/app/ui/skeletons'; 
+<<<<<<< HEAD
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Dashboard',
 };
+=======
+>>>>>>> 2139ce43d52b2808348c0d8c6fcbadaebd894546
 
 export default async function Page() {
   const latestInvoices = await fetchLatestInvoices();
