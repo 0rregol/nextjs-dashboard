@@ -8,10 +8,13 @@ import {
   Revenue,
 } from './definitions';
 import { formatCurrency } from './utils';
+import { unstable_noStore as noStore } from 'next/cache';
 
 const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' });
 
 export async function fetchRevenue() {
+  await new Promise((resolve) => setTimeout(resolve, 3000));
+  noStore();
   try {
     // Artificially delay a response for demo purposes.
     // Don't do this in production :)
